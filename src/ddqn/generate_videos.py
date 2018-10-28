@@ -6,6 +6,7 @@ import numpy as np
 import os
 import json
 import matplotlib.pyplot as plt
+from gym.wrappers import Monitor
 
 import torch
 import torch.nn as nn
@@ -16,6 +17,11 @@ import torch.nn.functional as F
 from collections import deque
 from IPython.display import clear_output
 from training import DQN
+
+# taken from: https://stackoverflow.com/questions/40195740/how-to-run-openai-gym-render-over-a-server
+from pyvirtualdisplay import Display
+display = Display(visible=0, size=(1920, 1080))
+display.start()
 
 #################################
 #TODO: current pipeline is to generate checkpoints on BW using training.py,
@@ -72,7 +78,7 @@ def test(model, video_path):
 
     env_id = "CartPole-v0"
     env = gym.make(env_id)
-    env = gym.wrappers.Monitor(env, video_path, video_callable = lambda episode_idx: episode_idx%250==0)
+    env = gym.wrappers.Monitor(env, video_path, video_callable = False, force = True)
     state = env.reset()
 
     #env.render()
