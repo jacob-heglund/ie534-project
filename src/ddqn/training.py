@@ -137,7 +137,8 @@ if __name__ == '__main__':
     losses = []
     all_rewards = []
     episode_reward = 0
-
+    
+    #################################
     # set checkpoint save directory
     ckpt_dir = './checkpoints/'
     ckpt_paths = []
@@ -150,9 +151,8 @@ if __name__ == '__main__':
     if not dir_exist:
         os.mkdir(ckpt_env_id_dir)
 
-
+    ###################################
     state = env.reset()
-
     for frame_idx in range(1, num_frames + 1):
         epsilon = epsilon_by_frame(frame_idx)
         action = current_model.act(state, epsilon)

@@ -9,14 +9,6 @@
 
 └── README.md
 
-.
-
-├── dqn
-
-├── ddqn
-
-└── README.md
-
 {dqn, ddqn}
 
 ├── videos              # Videos of networks trained for X frames for env_id

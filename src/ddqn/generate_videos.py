@@ -18,11 +18,6 @@ from collections import deque
 from IPython.display import clear_output
 from training import DQN
 
-# taken from: https://stackoverflow.com/questions/40195740/how-to-run-openai-gym-render-over-a-server
-from pyvirtualdisplay import Display
-display = Display(visible=0, size=(1920, 1080))
-display.start()
-
 #################################
 #TODO: current pipeline is to generate checkpoints on BW using training.py,
 # then generate videos on a personal computer using generate_videos.py since BW doesn't have
