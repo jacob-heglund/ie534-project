@@ -27,8 +27,9 @@ print('Imported Everything ...')
 # In[1]:
 
 
-
-out_dir = '/u/training/tra442/scratch/'
+load_path = './tar_ckp/target_RobotankNoFrameskip-v0_9700000.ckpt'
+out_dir = '/u/training/tra456/scratch/project/Robotank/'
+off_set = 9700000
 
 
 # In[2]:
@@ -68,7 +69,7 @@ import matplotlib.pyplot as plt
 # In[6]:
 
 
-USE_CUDA = torch.cuda.is_available()
+USE_CUDA = True
 Variable = lambda *args, **kwargs: autograd.Variable(*args, **kwargs).cuda() if USE_CUDA else autograd.Variable(*args, **kwargs)
 
 
@@ -255,13 +256,15 @@ class CnnDQN(nn.Module):
 
 
 current_model = CnnDQN(env.observation_space.shape, env.action_space.n)
-# current_model.load_state_dict(torch.load('current.ckpt'))
 target_model  = CnnDQN(env.observation_space.shape, env.action_space.n)
-# target_model.load_state_dict(torch.load('target.ckpt'))
 
 if USE_CUDA:
     current_model = current_model.cuda()
     target_model  = target_model.cuda()
+
+current_model.load_state_dict(torch.load(load_path))
+target_model.load_state_dict(torch.load(load_path))
+
 
 # optimizer = optim.Adam(current_model.parameters(), lr=0.00001)
 optimizer = adam.Adam(current_model.parameters(), lr=0.00001)
@@ -311,12 +314,12 @@ for frame_idx in range(1, num_frames + 1):
         np.save(out_dir + 'rewards_{}.npy'.format(env_id),np.array(all_rewards))
 
 #         SAVING CHECKPOINTS
-        torch.save(current_model.state_dict(),out_dir + 'cur_ckp/current_{}_{}.ckpt'.format(env_id,frame_idx))
-        torch.save(target_model.state_dict(),out_dir + 'tar_ckp/target_{}_{}.ckpt'.format(env_id,frame_idx))
+        torch.save(current_model.state_dict(),out_dir + './cur_ckp/current_{}_{}.ckpt'.format(env_id,frame_idx+off_set))
+        torch.save(target_model.state_dict(),out_dir + './tar_ckp/target_{}_{}.ckpt'.format(env_id,frame_idx+off_set))
 
 #         SAVING MODELS
-        torch.save(current_model,out_dir + 'cur_mod/current_{}_{}.model'.format(env_id,frame_idx))
-        torch.save(target_model,out_dir + 'tar_mod/target_{}_{}.model'.format(env_id,frame_idx))
+        torch.save(current_model,out_dir + './cur_mod/current_{}_{}.model'.format(env_id,frame_idx+off_set))
+        torch.save(target_model,out_dir + './tar_mod/target_{}_{}.model'.format(env_id,frame_idx+off_set))
 
     if done:
         state = env.reset()
