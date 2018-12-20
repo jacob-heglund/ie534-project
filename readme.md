@@ -1,5 +1,9 @@
 # Double Deep Q-Learning with Atari Environments
 
+## Deep Reinforcement Learning with Double Q Learning
+
+![](demon_attack.gif)
+
 ## Directory Structure
 
 ├── docs                        # Non-code documents
