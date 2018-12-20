@@ -14,12 +14,7 @@
 
 └── README.md
 
-Directory tree generated using <http://tree-generator.herokuapp.com/>
-> Use short, lowercase names for directories
-
-## Generating Videos (after training)
-
-To get videos, copy the 'checkpoints' folder to the same directory as generate_videos.py,
-then run generate_videos.py.  This will create a 'videos' folder.
-
-Note: The current pipeline is to generate checkpoints on BW using training.py,then generate videos on a personal computer using generate_videos.py since BW doesn't have the right version of gym.  This will hopefully change.
+## Final Results
+These videos show our agents being evaluated on their respectively trained games.
+<https://www.youtube.com/watch?v=6LGKKiaE8rw>
+<https://www.youtube.com/watch?v=A8NQa2PG5Gw>

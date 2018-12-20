@@ -15,8 +15,7 @@ plot = 'rewards'
 # plot = 'losses'
 
 
-# losses_DemonAttackNoFrameskip-v0_57200000.npy
-data_dir = './bw_outputs/' + game
+data_dir = game
 fn = plot + '_' + game + 'NoFrameskip-v0_' + str(ep) + '.npy'
 
 path = os.path.join(data_dir, fn)
