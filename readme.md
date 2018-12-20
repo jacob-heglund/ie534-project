@@ -7,6 +7,9 @@
 ![](demon_attack.gif)
 
 ### Estimation of Q Values
+<p align = "center">
+<img src="q_values_dqn_vs_ddqn.png">
+</p>
 ![Estimation of q values for DQN versus DDQN](q_values_dqn_vs_ddqn.png)
 ## Directory Structure
 
