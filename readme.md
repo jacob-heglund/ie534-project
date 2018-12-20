@@ -11,6 +11,7 @@ One of the main takeaways of Double Q Learning is that the estimates Q values ar
 <p align = "center">
 <img src="q_values_dqn_vs_ddqn.png">
 </p>
+
 ## Directory Structure
 
 ├── docs                        # Non-code documents
@@ -36,5 +37,9 @@ These videos show our agents being evaluated on their respectively trained games
 Jacob Heglund, Nitin Tangellamudi, Sahil Kumar, Jake Headings, Xinbo Wu
 
 # References and Acknowledgement
+<p>
 [1] Base code forked from <https://github.com/higgsfield/RL-Adventure>
+</p>
+<p>
 [2] Hasselt H., Guez A., Silver D. Deep Reinforcement Learning with Double Q-Learning
+</p>
