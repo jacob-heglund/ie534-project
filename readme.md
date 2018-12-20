@@ -2,8 +2,12 @@
 
 ## Deep Reinforcement Learning with Double Q Learning
 
+### An example of the agent playin Demon Attack
+
 ![](demon_attack.gif)
 
+### Estimation of Q Values
+![Estimation of q values for DQN versus DDQN](q_values_dqn_vs_ddqn.png)
 ## Directory Structure
 
 ├── docs                        # Non-code documents
@@ -24,3 +28,6 @@ These videos show our agents being evaluated on their respectively trained games
 <https://www.youtube.com/watch?v=6LGKKiaE8rw>
 
 <https://www.youtube.com/watch?v=A8NQa2PG5Gw>
+
+# Contributors
+Jacob Heglund, Nitin Tangellamudi, Sahil Kumar, Jake Headings, Xinbo Wu
