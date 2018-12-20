@@ -4,7 +4,7 @@
 # In[2]:
 
 
-''' CHANGE ENVIRONMENT HERE'''
+''' CHANGE ENVIRONMENT HERE '''
 ''' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ '''
 env_id = "PongNoFrameskip-v0"
 # env_id = "CartPole-v0"
