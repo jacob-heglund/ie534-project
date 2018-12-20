@@ -16,5 +16,7 @@
 
 ## Final Results
 These videos show our agents being evaluated on their respectively trained games.
+
 <https://www.youtube.com/watch?v=6LGKKiaE8rw>
+
 <https://www.youtube.com/watch?v=A8NQa2PG5Gw>
