@@ -4,6 +4,7 @@
 
 ### An example of the agent playin Demon Attack
 This agent was trained on a Double Deep Q Network (DDQN).
+
 ![](demon_attack.gif)
 
 ### Estimation of Q Values
@@ -27,7 +28,7 @@ One of the main takeaways of Double Q Learning is that the estimates Q values ar
 └── README.md
 
 ## Final Results
-These videos show our agents being evaluated on their respectively trained games.
+These videos show our agents being evaluated on their respectively trained games. The games shown are Demon Attack, Robotank, Pong, and Zxxon.
 
 <https://www.youtube.com/watch?v=6LGKKiaE8rw>
 
@@ -42,4 +43,7 @@ Jacob Heglund, Nitin Tangellamudi, Sahil Kumar, Jake Headings, Xinbo Wu
 </p>
 <p>
 [2] Hasselt H., Guez A., Silver D. Deep Reinforcement Learning with Double Q-Learning
+</p>
+<p>
+Thanks to professor Sirignano and the Blue Waters Supercomputer team at the University of Illinois for providing the resources to be able to train these agents for over 2000 hours.
 </p>
