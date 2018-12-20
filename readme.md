@@ -3,14 +3,14 @@
 ## Deep Reinforcement Learning with Double Q Learning
 
 ### An example of the agent playin Demon Attack
-
+This agent was trained on a Double Deep Q Network (DDQN).
 ![](demon_attack.gif)
 
 ### Estimation of Q Values
+One of the main takeaways of Double Q Learning is that the estimates Q values are lower than for Q Learning. This allows for DDQN to out perform DQN.
 <p align = "center">
 <img src="q_values_dqn_vs_ddqn.png">
 </p>
-![Estimation of q values for DQN versus DDQN](q_values_dqn_vs_ddqn.png)
 ## Directory Structure
 
 ├── docs                        # Non-code documents
@@ -34,3 +34,7 @@ These videos show our agents being evaluated on their respectively trained games
 
 # Contributors
 Jacob Heglund, Nitin Tangellamudi, Sahil Kumar, Jake Headings, Xinbo Wu
+
+# References and Acknowledgement
+[1] Base code forked from <https://github.com/higgsfield/RL-Adventure>
+[2] Hasselt H., Guez A., Silver D. Deep Reinforcement Learning with Double Q-Learning
